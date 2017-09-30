@@ -9,8 +9,10 @@ module.exports = {
 		request(request_url, function(error, response, body) {
 			console.log('error:', error);
 			console.log('statusCode:', response && response.statusCode);
-			console.log('body:', body);
-			var info = body
+			if (!error && body) {
+				var info = JSON.parse(body)
+			}
 		});
+		return info;
 	}
 }	
