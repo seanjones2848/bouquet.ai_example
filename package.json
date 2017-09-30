@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/seanjones2848/bouquet.ai_example/issues"
   },
-  "homepage": "https://github.com/seanjones2848/bouquet.ai_example#readme"
+  "homepage": "https://github.com/seanjones2848/bouquet.ai_example#readme",
+  "dependencies": {
+    "highcharts": "^5.0.14",
+    "request": "^2.83.0"
+  }
 }
