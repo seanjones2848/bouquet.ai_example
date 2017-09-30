@@ -11,6 +11,6 @@ module.exports = {
 			console.log('statusCode:', response && response.statusCode);
 			console.log('body:', body);
 			var info = body
-		}
+		});
 	}
 }	
