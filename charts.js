@@ -1,7 +1,7 @@
 var highChart = require('highcharts');
 var options = {
 	chart: {
-		renderTo: 'container'
+		renderTo: 'container',
 		type: 'column'
 	},
 	title: {
