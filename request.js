@@ -1,6 +1,6 @@
 var request = require('request');
 
-module.export {
+module.exports {
 	ask: function(month) {
 		var request_url = 'https://data.marincounty.org/resource/mw3d-ud6d.json?month_and_year=20' +\
 			(month < 7 ? '16' : '17') + '-' +\
