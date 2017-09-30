@@ -1,0 +1,3 @@
+parse data for accurate info (department: amount) to pass to chart
+create html page for display
+drop down menu linked to js input
