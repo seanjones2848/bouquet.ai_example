@@ -10,9 +10,8 @@ module.exports = {
 			console.log('error:', error);
 			console.log('statusCode:', response && response.statusCode);
 			if (!error && body) {
-				var info = body
+				return body;
 			}
 		});
-		return info;
 	}
 }	
