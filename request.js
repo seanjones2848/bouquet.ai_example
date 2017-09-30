@@ -10,7 +10,7 @@ module.exports = {
 			console.log('error:', error);
 			console.log('statusCode:', response && response.statusCode);
 			if (!error && body) {
-				var info = JSON.parse(body)
+				var info = body
 			}
 		});
 		return info;
