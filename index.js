@@ -1,6 +1,5 @@
 var charts = require('./charts.js');
 var info = require('./request.js');
 
-details = info.ask(1);
-console.log(details);
+info.ask(1, function(s){console.log(s)});
 console.log("Running just fine");
