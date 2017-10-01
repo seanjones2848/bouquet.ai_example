@@ -12,7 +12,15 @@ module.exports = {
 			var info = (function() {
 				return (JSON.parse(body));
 			})();
-			callback(info);
+			var result = info.reduce(function(res, obj) {
+				if (!(obj.department in res))
+					res.__array.push(res[obj.department] = obj);
+				else {
+					res[obj.department].amount += obj.amount;
+				}
+				return res;
+			}, {__array:[]})
+			callback(res);
 		});
 	}
 }	
