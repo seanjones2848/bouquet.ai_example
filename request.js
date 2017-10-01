@@ -9,18 +9,13 @@ module.exports = {
 		request(request_url, function(error, response, body) {
 			console.log('error:', error);
 			console.log('statusCode:', response && response.statusCode);
+			for (var i=0; i < body.length; i++) {
+				for (var j=0; j < body[i].length; j++) {
+					if (body[i][j]) 
 			var info = (function() {
 				return (JSON.parse(body));
 			})();
-			var result = info.reduce(function(res, obj) {
-				if (!(obj.department in res))
-					res.__array.push(res[obj.department] = obj);
-				else {
-					res[obj.department].amount += obj.amount;
-				}
-				return res;
-			}, {__array:[]})
-			callback(res);
+			callback(info);
 		});
 	}
 }	
